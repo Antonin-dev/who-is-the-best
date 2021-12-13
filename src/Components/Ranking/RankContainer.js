@@ -32,9 +32,9 @@ const RankContainer = () => {
     ]
 
     return (
-        <div>
-            <h1>Classement</h1>
-            <div>
+        <div className="bg-black text-white h-screen ">
+            <h1 className="py-6 text-2xl uppercase">Classement</h1>
+            <div className="my-6 mx-16">
                 {ranks.map(({name, score}, index) =>
                     <RankCard name={name} score={score} key={index}/>
                 )}

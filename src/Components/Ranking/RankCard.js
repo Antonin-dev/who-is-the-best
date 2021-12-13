@@ -2,12 +2,12 @@ import React from "react";
 
 function RankCard({name, score}) {
     return (
-        <div>
-            <p> numero ranking</p>
-            <div>
-                <p>{name}</p>
-                <p>{score}</p>
-            </div>
+        <div className="flex justify-between mb-6">
+            <p className="flex"> numero ranking</p>
+
+            <p>{name}</p>
+            <p>{score}</p>
+
         </div>
     )
 }
