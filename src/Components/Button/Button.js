@@ -1,8 +1,11 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
-function Button({text, path}){
+function Button({text, path}) {
     return (
-        <div className="bg-slate-300 h-12 rounded-3xl flex justify-center items-center">{text}</div>
+        <Link to={`/${path}`}>
+            <div className="bg-slate-300 h-12 rounded-3xl flex justify-center items-center">{text}</div>
+        </Link>
     );
 }
 
