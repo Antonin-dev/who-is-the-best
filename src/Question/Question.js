@@ -4,8 +4,6 @@ import AnswerCard from "./AnswerCard";
 
 const Question = ({name}) => {
     const {id} = useParams()
-    console.log(id)
-    console.log(name)
     return (
         <div className="bg-black w-screen h-screen">
             <p className="text-left text-white w-screen ml-3 pt-3">{name}</p>
