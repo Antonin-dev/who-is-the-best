@@ -1,11 +1,16 @@
 import React, {useEffect, useState} from 'react';
-import {useParams} from "react-router";
+import {useNavigate, useParams} from "react-router";
 import AnswerCard from "./AnswerCard";
 
 const Question = ({name}) => {
     const {id} = useParams()
-    const port = process.env.PORT || "http://localhost:3000"
+    const port = process.env.PORT || "http://localhost:3001"
     const [question, setQuestion] = useState(null);
+    const history = useNavigate();
+
+    if (id === "6"){
+        history(`/result/${parseInt("6")}`)
+    }
 
     useEffect(() => {
         async function fetchQuestion () {
@@ -21,7 +26,7 @@ const Question = ({name}) => {
 
         }
     fetchQuestion();
-    }, [id])
+    }, [id, port])
     return (
         <div className="bg-black w-screen h-screen">
             <p className="text-left text-white w-screen ml-3 pt-3">{name}</p>

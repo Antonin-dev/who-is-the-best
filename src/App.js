@@ -17,7 +17,7 @@ function App() {
                 <Route path="/login" element={<Login setName={setName}/>}/>
                 <Route path="/question/:id" element={<Question name={name}/>}/>
                 <Route path="/rank" element={<RankContainer/>}/>
-                <Route path="/result" element={<Result name={name}/>}/>
+                <Route path="/result/:score" element={<Result name={name}/>}/>
             </Routes>
         </div>
     );

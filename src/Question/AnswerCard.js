@@ -2,17 +2,19 @@ import React from 'react';
 import {useNavigate} from "react-router";
 
 const AnswerCard = ({text, isValid, idQuestion}) => {
-    console.log(isValid);
-    const history = useNavigate();
-    console.log(typeof parseInt(idQuestion))
 
+    const history = useNavigate();
 
     function changeHistory (){
-        history(`/question/${parseInt(idQuestion)+1}`);
+        if (isValid){
+            history(`/question/${parseInt(idQuestion)+1}`);
+        }else{
+            history(`/result/${parseInt(idQuestion)}`);
+        }
     }
 
     return (
-        <div className="w-32 border-white rounded-3xl bg-white" onClick={() => changeHistory()}>
+        <div className="w-32 border-white rounded-3xl bg-white p-4 mr-2" onClick={() => changeHistory()}>
             {text}
         </div>
     );
