@@ -25,11 +25,10 @@ const Result = ({name}) => {
     },[])
 
     return (
-        <div className="bg-black w-screen h-screen flex justify-center">
-            <div className="bg-black w-2/3 h-screen flex flex-col justify-around items-center">
-                <h1 className="text-4xl text-white mt-32 h-auto">Félicitation {name}</h1>
-                 {/*todo tu es le meilleur a rajouter*/}
-                <p className="text-white text-2xl">Score : {score}</p>
+        <div className="bg-slate-800 w-screen h-screen flex justify-center items-center">
+            <div className="bg-slate-800 w-2/3 h-screen flex flex-col items-center">
+                <h1 className="text-4xl text-slate-300 mt-32 h-auto py-20">Félicitations {name}</h1>
+                <p className="text-slate-300 text-2xl pb-24">Score : {score}</p>
                 <div className="w-48 h-28 flex flex-col justify-around">
                     <Button text="REJOUER" path="login"/>
                     <Button text="CLASSEMENT" path="rank"/>

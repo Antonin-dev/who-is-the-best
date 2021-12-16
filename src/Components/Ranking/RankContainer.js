@@ -21,9 +21,9 @@ const RankContainer = () => {
     }, [port]);
 
     return (
-        <div className="bg-black text-white h-screen ">
-            <h1 className="py-6 text-2xl uppercase">Classement</h1>
-            <div className="my-6 mx-16">
+        <div className="bg-slate-800 text-slate-300 h-screen ">
+            <h1 className="py-6 text-2xl uppercase pb-24">Classement</h1>
+            <div className="my-6 px-16">
                 {ranks && ranks.map((rank, index) =>
                         <RankCard name={rank.name} score={rank.score} key={index} index={index+1} />
                     )}
@@ -31,6 +31,7 @@ const RankContainer = () => {
         </div>
 
     );
+
 };
 
 export default RankContainer;

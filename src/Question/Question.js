@@ -28,18 +28,22 @@ const Question = ({name}) => {
     fetchQuestion();
     }, [id, port])
     return (
-        <div className="bg-black w-screen h-screen">
-            <p className="text-left text-white w-screen ml-3 pt-3">{name}</p>
+        <div className="bg-slate-800 w-screen h-screen">
+            <p className="text-left text-slate-300 w-screen ml-3 pt-3">{name}</p>
             {question && (<div className="flex flex-col pt-48">
-                <h2 className="text-white mb-10">{question.question}</h2>
+                <h2 className="text-slate-300 mb-10">{question.question}</h2>
                 <div className="flex flex-col mx-auto ">
                     <div className="flex mb-4">
-                        <AnswerCard text={question.answer[0].text} isValid={question.answer[0].isValid} idQuestion={id}/>
-                        <AnswerCard text={question.answer[1].text} isValid={question.answer[1].isValid} idQuestion={id}/>
+                        <AnswerCard text={question.answer[0].text} isValid={question.answer[0].isValid}
+                                    idQuestion={id}/>
+                        <AnswerCard text={question.answer[1].text} isValid={question.answer[1].isValid}
+                                    idQuestion={id}/>
                     </div>
                     <div className="flex">
-                        <AnswerCard text={question.answer[2].text} isValid={question.answer[2].isValid} idQuestion={id}/>
-                        <AnswerCard text={question.answer[3].text} isValid={question.answer[3].isValid} idQuestion={id}/>
+                        <AnswerCard text={question.answer[2].text} isValid={question.answer[2].isValid}
+                                    idQuestion={id}/>
+                        <AnswerCard text={question.answer[3].text} isValid={question.answer[3].isValid}
+                                    idQuestion={id}/>
                     </div>
                 </div>
 
