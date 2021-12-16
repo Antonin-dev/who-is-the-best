@@ -9,7 +9,7 @@ const RankContainer = () => {
 
     useEffect(() => {
         async function fetchRank () {
-            const rank = await fetch(`${port}/rank`, {
+            const rank = await fetch(`/rank`, {
                     method: "GET",
                 }
             );

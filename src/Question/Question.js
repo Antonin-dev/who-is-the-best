@@ -4,7 +4,6 @@ import AnswerCard from "./AnswerCard";
 
 const Question = ({name}) => {
     const {id} = useParams()
-    const port = process.env.PORT || "http://localhost:3001"
     const [question, setQuestion] = useState(null);
     const history = useNavigate();
 
@@ -14,7 +13,7 @@ const Question = ({name}) => {
 
     useEffect(() => {
         async function fetchQuestion () {
-            const question = await fetch(`${port}/question`, {
+            const question = await fetch(`/question`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -26,7 +25,7 @@ const Question = ({name}) => {
 
         }
     fetchQuestion();
-    }, [id, port])
+    }, [id])
     return (
         <div className="bg-slate-800 w-screen h-screen">
             <p className="text-left text-slate-300 w-screen ml-3 pt-3">{name}</p>

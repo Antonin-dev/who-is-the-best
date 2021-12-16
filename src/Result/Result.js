@@ -5,11 +5,10 @@ import {useParams} from "react-router";
 const Result = ({name}) => {
 
     const {score} = useParams();
-    const port = process.env.PORT || "http://localhost:3001";
 
     useEffect(() => {
         async function addRank () {
-            const ranks = await fetch(`${port}/addRank`, {
+            const ranks = await fetch(`/addRank`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",

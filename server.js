@@ -8,6 +8,8 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './build/index.html'));
 })
 
+require('./BackEnd/Router')(app);
+
 app.listen(process.env.PORT || 3000, () => {
     console.log('Front end started')
 })
